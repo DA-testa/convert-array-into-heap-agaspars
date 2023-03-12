@@ -36,6 +36,7 @@ def main():
     # for i in reversed(range(5 // 2)): #iterate from (n/2)-1 to 0
     #     print(i)
     # print(7//3)
+    firstInput = input()
     n = int(input())
     data = list(map(int, input().split()))
 
