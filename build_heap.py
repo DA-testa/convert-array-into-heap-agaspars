@@ -50,7 +50,7 @@ def main():
         for i, j in swaps:
             print(i, j)
     if "F" in firstInput:
-        filename = 'test/'+input().strip()
+        filename = 'tests/'+input().strip()
         data = open(filename,"r") 
         n = int(data.readline().strip())
         elements = list(map(int, data.readline().strip().split()))
