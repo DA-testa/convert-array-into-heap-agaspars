@@ -37,17 +37,32 @@ def main():
     #     print(i)
     # print(7//3)
     firstInput = input()
-    n = int(input())
-    data = list(map(int, input().split()))
+    if "I" in firstInput:
+        n = int(input())
+        data = list(map(int, input().split()))
 
-    swaps = build_heap(data)
+        swaps = build_heap(data)
 
-    #swap amount
-    print(len(swaps))
+        #swap amount
+        print(len(swaps))
 
-    #result swaps
-    for i, j in swaps:
-        print(i, j)
+        #result swaps
+        for i, j in swaps:
+            print(i, j)
+    if "F" in firstInput:
+        filename = 'test/'+input().strip()
+        data = open(filename,"r") 
+        n = int(data.readline().strip())
+        elements = list(map(int, data.readline().strip().split()))
+        swaps = build_heap(elements)
+
+        #swap amount
+        print(len(swaps))
+
+        #result swaps
+        for i, j in swaps:
+            print(i, j)
+
 
 
 if __name__ == "__main__":
